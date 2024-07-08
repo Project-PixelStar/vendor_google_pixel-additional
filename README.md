@@ -59,8 +59,7 @@ $(call inherit-product-if-exists, vendor/google/pixel-additional/config.mk)
 This repo also includes several additional GApps packages, such as 
 * `TARGET_INCLUDE_CAMERA_GO`: Camera from Google (Formerly, Camera Go or GCam Go)
 * `TARGET_SUPPORTS_LILY_EXPERIENCE`: Enabling Android (Go Edition) device specific features
-* `TARGET_SUPPORTS_GOOGLE_BATTERY`: Build TurboAdapter with dummy GoogleBatteryService wheh flag is false
-* `TARGET_GBOARD_KEY_HEIGHT`: Resize GBoard ime key height to `TARGET_GBOARD_KEY_HEIGHT` (Must be float. e.g. 1.2)
+* `TARGET_SUPPORTS_GOOGLE_BATTERY`: Build TurboAdapter with dummy GoogleBatteryService when flag is false
 
 ## Credits
 * [DerpFest AOSP](https://github.com/DerpFest-AOSP)

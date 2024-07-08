@@ -34,8 +34,6 @@ PRODUCT_PACKAGES += \
     lily_experience
 endif
 
-ifneq ($(WITH_GMS),false)
-
 # Include TurboAdapter without Google Battery support
 ifeq ($(TARGET_SUPPORTS_GOOGLE_BATTERY),false)
 PRODUCT_PACKAGES += \
@@ -44,12 +42,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/google/pixel-additional/common/proprietary/system_ext/lib64/libpowerstatshaldataprovider.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libpowerstatshaldataprovider.so
 endif #TARGET_SUPPORTS_GOOGLE_BATTERY
-
-# Resize GBoard ime key height to TARGET_GBOARD_KEY_HEIGHT
-# Value must be float e.g. 1.2
-ifneq ($(TARGET_GBOARD_KEY_HEIGHT),)
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.com.google.ime.height_ratio=$(TARGET_GBOARD_KEY_HEIGHT)
-endif
-
-endif #WITH_GMS
